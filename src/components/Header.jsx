@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from '../router'
-import devraLogo from '../assets/devraLogo.png'
+import devraBlack from '../assets/devraBlack.png'
 import './Header.css'
 
 export default function Header({ variant = 'overlay' }) {
@@ -29,14 +29,12 @@ export default function Header({ variant = 'overlay' }) {
       <header id="siteHeader" className={headerSolid ? 'solid' : ''}>
         <Link to="/" className="brand" onClick={() => setIsMenuOpen(false)}>
           <img 
-            src={devraLogo} 
+            src={devraBlack} 
             alt="Devra" 
             style={{ 
               height: '48px', 
               objectFit: 'contain', 
-              display: 'block', 
-              filter: headerSolid ? 'none' : 'brightness(0) invert(1)',
-              transition: 'filter 0.3s ease'
+              display: 'block'
             }} 
           />
         </Link>
