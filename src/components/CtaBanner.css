@@ -1,0 +1,98 @@
+.cta-banner-wrap {
+  background: var(--color-parchment);
+  padding: 0 var(--page-gutter) var(--section-space-sm);
+  content-visibility: auto;
+  contain-intrinsic-size: 360px;
+}
+
+.cta-banner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  background: var(--color-purple);
+  border-radius: 20px;
+  padding: clamp(40px, 6vw, 64px) clamp(24px, 5vw, 48px) clamp(48px, 7vw, 72px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(500px, 100%);
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(140, 60, 200, 0.35) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-banner__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #6ecb7a;
+  display: block;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.cta-banner__dot::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: rgba(110, 203, 122, 0.35);
+  animation: dotPulse 2s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.6); opacity: 0; }
+}
+
+.cta-banner__heading {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h1);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.cta-banner__body {
+  font-size: var(--fs-p);
+  font-weight: 300;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 560px;
+}
+
+.cta-banner__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 48px;
+  margin-top: 8px;
+  padding: 14px 36px;
+  border-radius: 100px;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cta-banner__btn:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.22);
+    transform: translateY(-1px);
+  }
+}

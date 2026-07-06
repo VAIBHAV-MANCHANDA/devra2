@@ -1,0 +1,36 @@
+import CategoryPage from './CategoryPage'
+import heroImg       from '../assets/residential.avif'
+import img121        from '../assets/projects/res-121-122.avif'
+import imgVilla361   from '../assets/projects/res-villa-361.avif'
+import imgVilla58    from '../assets/projects/res-villa-58.jpg'
+import imgVilla303   from '../assets/projects/res-villa-303.jpg'
+import imgVilla201d  from '../assets/projects/res-villa-201d.jpg'
+import imgKangs      from '../assets/projects/res-kangs.avif'
+import imgSupreet    from '../assets/projects/res-supreet.jpg'
+import imgMidhas     from '../assets/projects/res-midhas.avif'
+import imgMinzs      from '../assets/projects/res-minzs.jpg'
+import { seoConfig } from '../seoConfig'
+
+const projects = [
+  { id: 1, size: '300 + 300 SQYD', year: '2024', type: 'Home',  name: '121 & 122 PH-1 Omaxe',   location: 'New Chandigarh', img: img121,       to: '/services/residential/121-122' },
+  { id: 2, size: '500 SQYD',       year: '2021', type: 'House', name: 'Villa 361 PH-3 Cassia',   location: 'New Chandigarh', img: imgVilla361,  to: '/services/residential/villa-361' },
+  { id: 3, size: '300 SQYD',       year: '2025', type: 'House', name: 'Villa 58 PH-3 Cassia',    location: 'New Chandigarh', img: imgVilla58,   to: '/services/residential/villa-58' },
+  { id: 4, size: '500 SQYD',       year: '2023', type: 'House', name: 'Villa 303 PH-1 Cassia',   location: 'New Chandigarh', img: imgVilla303,  to: '/services/residential/villa-303' },
+  { id: 5, size: '300 SQYD',       year: '2025', type: 'House', name: 'Villa 201D PH-3 Cassia',  location: 'New Chandigarh', img: imgVilla201d, to: '/services/residential/villa-201d' },
+  { id: 6, size: '300 SQYD',       year: '2025', type: 'House', name: "The Kang's",              location: 'DLF, New Chandigarh', img: imgKangs,    to: '/services/residential/the-kangs' },
+  { id: 7, size: '300 SQYD',       year: '2025', type: 'House', name: 'Col. Supreet Ji',         location: 'Eco City, New Chandigarh', img: imgSupreet,  to: '/services/residential/col-supreet' },
+  { id: 8, size: '300 SQYD',       year: '2025', type: 'House', name: "The Midha's",             location: 'PH-3 Cassia, New Chandigarh', img: imgMidhas,   to: '/services/residential/the-midhas' },
+  { id: 9, size: '300 SQYD',       year: '2024', type: 'House', name: "The Minz's",              location: 'PH-3 Cassia, New Chandigarh', img: imgMinzs,    to: '/services/residential/the-minzs' },
+]
+
+export default function ResidentialPage() {
+  return (
+    <CategoryPage
+      heroImg={heroImg}
+      title="Residential Architects in Chandigarh"
+      description="Luxury residential projects crafted with elegance, blending modern design, comfort, and timeless architectural excellence."
+      projects={projects}
+      seo={seoConfig['/residential-architects-chandigarh']}
+    />
+  )
+}
